@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace SampleEmailSender;
+namespace SampleEmailSender.Emails;
 
 [ApiController]
 public sealed class EmailController : ControllerBase
@@ -13,7 +13,7 @@ public sealed class EmailController : ControllerBase
     }
 
     [HttpPost("email/send")]
-    public async Task<IActionResult> Send([FromForm] SendEmailInputModel input)
+    public async Task<IActionResult> Send([FromForm] SendEmailRequest input)
     {
         await _emailService.SendEmail(input);
         return Ok();

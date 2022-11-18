@@ -1,4 +1,4 @@
-﻿namespace SampleEmailSender;
+﻿namespace SampleEmailSender.Emails;
 
 public sealed class EmailOptions
 {

@@ -1,6 +1,6 @@
-﻿namespace SampleEmailSender;
+﻿namespace SampleEmailSender.Emails;
 
-public sealed record SendEmailInputModel(
+public sealed record SendEmailRequest(
     string EmailOfReceiver,
     string Subject,
     string Body,

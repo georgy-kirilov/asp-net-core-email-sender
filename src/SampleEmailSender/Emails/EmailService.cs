@@ -4,7 +4,7 @@ using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
 
-namespace SampleEmailSender;
+namespace SampleEmailSender.Emails;
 
 public sealed class EmailService : IEmailService
 {
@@ -15,7 +15,7 @@ public sealed class EmailService : IEmailService
         _emailOptions = emailOptions.Value;
     }
 
-    public async Task SendEmail(SendEmailInputModel input)
+    public async Task SendEmail(SendEmailRequest input)
     {
         var email = CreateEmail(input);
 
@@ -30,7 +30,7 @@ public sealed class EmailService : IEmailService
         await smtp.DisconnectAsync(true);
     }
 
-    private MimeMessage CreateEmail(SendEmailInputModel input)
+    private MimeMessage CreateEmail(SendEmailRequest input)
     {
         var email = new MimeMessage
         {
