@@ -1,6 +1,4 @@
-﻿using SampleEmailSender.Models;
-
-namespace SampleEmailSender.Services;
+﻿namespace SampleEmailSender;
 
 public interface IEmailService
 {

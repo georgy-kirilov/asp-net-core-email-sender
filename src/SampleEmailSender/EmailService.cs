@@ -4,10 +4,7 @@ using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
 
-using SampleEmailSender.Models;
-using SampleEmailSender.Options;
-
-namespace SampleEmailSender.Services;
+namespace SampleEmailSender;
 
 public sealed class EmailService : IEmailService
 {
@@ -71,10 +68,10 @@ public sealed class EmailService : IEmailService
             }
 
             using var stream = new MemoryStream();
-            
+
             attachment.CopyTo(stream);
 
-            fileBytes= stream.ToArray();
+            fileBytes = stream.ToArray();
 
             var contentType = ContentType.Parse(attachment.ContentType);
 

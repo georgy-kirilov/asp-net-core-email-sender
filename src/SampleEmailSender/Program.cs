@@ -1,5 +1,4 @@
-using SampleEmailSender.Options;
-using SampleEmailSender.Services;
+using SampleEmailSender;
 
 var builder = WebApplication.CreateBuilder(args);
 

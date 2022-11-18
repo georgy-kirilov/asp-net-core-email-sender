@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-using SampleEmailSender.Models;
-using SampleEmailSender.Services;
-
-namespace SampleEmailSender.Controllers;
+namespace SampleEmailSender;
 
 [ApiController]
 public sealed class EmailController : ControllerBase
